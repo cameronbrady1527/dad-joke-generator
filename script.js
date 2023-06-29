@@ -16,7 +16,6 @@ function getJoke() {
     xhr.onreadystatechange = function () {
         if (this.readyState == this.DONE) {
             const joke = JSON.parse(this.responseText);
-            console.log('hi');
             jokeText.innerHTML = `${joke.body[0].setup} -> ${joke.body[0].punchline}`;
         }
     }
